@@ -5,13 +5,13 @@ const throttleText = document.getElementById('throttle');
 
 // For every input type
 
-// const updateDebounceText = debounce((text) => {
-//   debounceText.textContent = text;
-// }, 1000);
+const updateDebounceText = debounce((text) => {
+  debounceText.textContent = text;
+}, 1000);
 
-// const updateThrottleText = throttle((text) => {
-//   throttleText.textContent = text;
-// }, 1000);
+const updateThrottleText = throttle((text) => {
+  throttleText.textContent = text;
+}, 1000);
 
 input.addEventListener('input', (e) => {
   defaultText.textContent = e.target.value;
