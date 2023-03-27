@@ -38,10 +38,10 @@ function throttle(cb, delay = 1000) {
       shouldWait = false;
     } else {
       cb(...waitingArgs);
-      waitingArgs = null
-    setTimeout( timerFunc,delay);
+      waitingArgs = null;
+      setTimeout(timerFunc, delay);
     }
-  }
+  };
   return (...args) => {
     if (shouldWait) {
       waitingArgs = args; // when the function is waiting which is of delay time, we are setting the args of the last call
@@ -49,26 +49,27 @@ function throttle(cb, delay = 1000) {
     }
     cb(...args);
     shouldWait = true;
-    setTimeout( timerFunc,delay);
+    setTimeout(timerFunc, delay);
   };
 }
 
 // For every mouse movement
 
-
-document.addEventListener("mousemove", e => {
-  incrementCount(defaultText)
-  updateDebounceText()
-  updateThrottleText()
-})
+document.addEventListener('mousemove', (e) => {
+  incrementCount(defaultText);
+  updateDebounceText();
+  updateThrottleText();
+});
 
 function incrementCount(element) {
-  element.textContent = (parseInt(element.innerText) || 0) + 1
+  element.textContent = (parseInt(element.innerText) || 0) + 1;
 }
 
 const updateDebounceText = debounce(() => {
-  incrementCount(debounceText)
-})
+  incrementCount(debounceText);
+});
 const updateThrottleText = throttle(() => {
-  incrementCount(throttleText)
-}, 100)
+  incrementCount(throttleText);
+}, 100);
+
+

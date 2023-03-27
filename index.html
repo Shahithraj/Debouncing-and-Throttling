@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    body {
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         height: 500px;
-    }
-    b {
+      }
+      b {
         font-size: large;
-    }
-    div {
+      }
+      div {
         margin: 10px;
-    }
-  </style>
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <input type="text">
+      }
+    </style>
+    <script src="debounce.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- <input type="text">
   <div>
     <b>Default:</b>
     <span id="default"></span>
@@ -35,6 +36,24 @@
   <div>
     <b>Throttle:</b>
     <span id="throttle"></span>
-  </div>
-</body>
+  </div> -->
+    <button class="increment__btn">Increment</button>
+    <p>Button Pressed <span class="increment__pressed">0</span> Times</p>
+    <p>Debounce Triggered <span class="increment__debounce">0</span> Times</p>
+    <div class="parent">
+      <div class="child1"></div>
+      <div class="child2"></div>
+      <div class="child3"></div>
+    <div class="child4">
+      <div class="grand-child"></div>
+    </div>
+
+    </div>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
 </html>
