@@ -15,3 +15,18 @@ const myThrottle = (fn, delay) => {
     return fn(...args);
   };
 };
+
+
+const myThrottle = (fn,delay) => {
+   let fireThrottle = true;
+
+  return function (...args) {
+    if(fireThrottle) {
+        fn(...args);
+      fireThrottle = false;
+      setTimeout(() => {
+        fireThrottle = true;
+      },delay)
+    }
+  }
+}
